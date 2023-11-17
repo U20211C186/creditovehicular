@@ -1,0 +1,50 @@
+<app-toolbar-session></app-toolbar-session>
+<div class="center-text">
+  Cronograma del Cuotón
+</div>
+<div class="purchase-history">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla tabla-estilo">
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+    <!-- Fecha Column -->
+    <ng-container matColumnDef="fechaPago">
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaPago}} </td>
+    </ng-container>
+
+    <!-- Saldo Column -->
+    <ng-container matColumnDef="saldoInicialCuotaFinal">
+      <th mat-header-cell *matHeaderCellDef> Saldo Inicial Cuota final </th>
+      <td mat-cell *matCellDef="let element"> {{element.saldoInicialCuotaFinal}} </td>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="interesCuotaFinal">
+      <th mat-header-cell *matHeaderCellDef> Interés Cuota final </th>
+      <td mat-cell *matCellDef="let element"> {{element.interesCuotaFinal}} </td>
+    </ng-container>
+
+    <!-- Seguro Desgravamen Column -->
+    <ng-container matColumnDef="amortCuotaFinal">
+      <th mat-header-cell *matHeaderCellDef> Amort. Cuota final </th>
+      <td mat-cell *matCellDef="let element"> {{element.amortCuotaFinal}} </td>
+    </ng-container>
+    <!-- Seguro Vehicular Column -->
+    <ng-container matColumnDef="seguroDesgCuotaFinal">
+      <th mat-header-cell *matHeaderCellDef> Seguro Desg. Cuota final </th>
+      <td mat-cell *matCellDef="let element"> {{element.seguroDesgCuotaFinal}} </td>
+    </ng-container>
+    <!-- Amortización Column -->
+    <ng-container matColumnDef="saldoFinalCuotaFinal">
+      <th mat-header-cell *matHeaderCellDef> Saldo Final Cuota Final </th>
+      <td mat-cell *matCellDef="let element"> {{element.saldoFinalCuotaFinal}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+  </mat-paginator>
+</div>

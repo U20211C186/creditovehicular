@@ -1,0 +1,174 @@
+.recover-password {
+    background-color: #FF0000;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    min-height: 140vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Cambio a dirección de columna */
+
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Agrega margen inferior para separar los elementos */
+  }
+ /*Estilos Toolbar*/
+/* Estilos para pantallas grandes */
+.example-spacer {
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .mat-toolbar {
+    padding-top: 30px;
+    padding-left: 30px;
+    height: 100px;
+    line-height: 1;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  .mat-toolbar {
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 1;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  } 
+  
+  .example-spacer {
+    font-size: 20px;
+  }
+}
+
+/*Estilos Card*/
+  mat-card {
+    background-color: #03588C;
+    max-width: 400px;
+    height: 600px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  h1{
+    font-size: 30px;
+  }
+  
+  mat-form-field {
+    padding-top: 5px;
+    width: 350px;
+  }
+  
+  .registrarse {
+    padding-top: 30px;
+    font-size: 15px;
+  }
+ .registrarseempresa{
+  font-size: 15px;
+ }
+  .mi-linea {
+    border: none;
+    border-top: 3px solid grey;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  button{
+    max-width: 300px;
+    font-size: 15px;
+  }
+
+
+  /* Estilos para pantallas de 600px o menos */
+@media (max-width: 600px) {
+  mat-card {
+    max-width: none;
+    height: auto;
+    padding: 10px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+
+  }
+  
+  .registrarse {
+    padding-top: 10px;
+  }
+  
+  .mi-linea {
+    margin: 10px auto;
+  }
+  
+  .recuperarcontraseña {
+    padding-bottom: 10px;
+
+  }
+  
+  button {
+    max-width: 100%;
+  }
+}
+
+/* Estilos para pantallas de 960px o menos */
+@media (max-width: 960px) {
+  h1{
+    font-size: 25px;
+  }
+  mat-card {
+    max-width: none;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    border-radius: 60px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    
+  }
+  
+  .registrarse {
+    padding-top: 10px;
+    font-size: 10px;
+
+  }
+  
+  .mi-linea {
+    margin: 10px auto;
+  }
+  
+  .recuperarcontraseña {
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  button {
+    max-width: 100%;
+  }
+  .registrarseempresa{
+    font-size: 10px;
+  }
+
+  
+  .recover-password {
+    background-size: 100%;
+  }
+}
+

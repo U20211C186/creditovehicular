@@ -1,0 +1,83 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #FF0000; /* Cambia esto al color que desees */
+
+  }
+  
+  .example-card {
+    flex-basis: calc(25% - 20px);
+    margin: 0%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .example-card img {
+    width: 100%;
+  }
+  
+  @media (max-width: 960px) {
+    .example-card {
+      flex-basis: calc(33.33% - 20px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .example-card {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+
+mat-form-field {
+    margin-bottom: 0;
+    max-width: 300px; /* Cambia "width" a "max-width" para permitir que el campo de búsqueda sea responsive */
+    width: 100%; /* Asegúrate de que el campo de búsqueda ocupe todo el ancho disponible */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Agrega esta línea para que el contenedor de búsqueda crezca y ocupe el espacio disponible */
+    justify-content: center; /* Agrega esta línea para centrar horizontalmente el contenido de búsqueda */
+}
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  .product-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FF0000; /* Cambia el color de fondo a rojo */
+    padding: 10px; /* Agrega un espacio alrededor de los mat-card */
+  }
+  
+  .product-card {
+    flex-basis: calc(16.66% - 20px); /* Ajusta el ancho de cada tarjeta para que haya 6 en una fila */
+    margin-right: 10px; /* Espaciado entre las tarjetas */
+  }
+  
+  .product-card:last-child {
+    margin-right: 0; /* Elimina el margen derecho de la última tarjeta */
+  }
+  .example-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #D97014;
+    border-radius: 20px;
+  }
+  
+  .example-card img {
+    padding-left: 8px;
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-height: 200px;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    object-fit: contain;
+  }
+  

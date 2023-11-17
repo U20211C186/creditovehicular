@@ -1,0 +1,68 @@
+
+    
+  <main class="recover-password">
+    <div class="content-wrapper">
+
+    <mat-card >
+      <h1 style=" font-weight: bold;">Registrate</h1>
+      <form>
+      <p style="color: white">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Introduce tu correo electrónico</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label style="color: white">Nombre</mat-label>
+            <input matInput placeholder="Placeholder"  [formControl]="name" style="color: white">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Requerido</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label style="color: white">Apellido</mat-label>
+            <input matInput placeholder="Placeholder" [formControl]="lastName" style="color: white">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Requerido</mat-hint>
+          </mat-form-field>
+
+         
+          <mat-form-field appearance="outline">
+            <mat-label style="color: white">Contraseña</mat-label>
+            <input matInput placeholder="Placeholder"  [formControl]="password" style="color: white">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Requerido</mat-hint>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label style="color: white">Repetir Contraseña</mat-label>
+            <input matInput placeholder="Placeholder" [formControl]="confirmPassword" style="color: white">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Requerido</mat-hint>
+          </mat-form-field>
+      </p>
+    </form>
+      <button mat-button style="background-color: #C87589;font-weight: bold" (click)="save()"> Registrarse </button>
+
+    </mat-card>
+  </div>
+
+    <div color="primary" style="background-color: #FF0000;">
+      <span style="color: black; font-weight: bold;">
+        <img src="../../../assets/images/Oferta2.png" alt="Logo de SaveUp">
+      </span>
+    </div>
+</main>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  

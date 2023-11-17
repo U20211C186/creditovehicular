@@ -1,0 +1,158 @@
+<app-toolbar-session></app-toolbar-session>
+
+<div class="container">
+    <div class="centered-container">
+        <div class="credit-simulator">
+            <div class="currency-type">
+                <h2>Tipo de Moneda</h2>
+                <div class="currency-options">
+                    <label for="sol">
+                        <input type="radio" name="currency" id="sol" value="sol">
+                        <img src="  ../../../assets/images/sol.png" alt="Sol">
+                    </label>
+                    <label for="dolar">
+                        <input type="radio" name="currency" id="dolar" value="dolar">
+                        <img src="  ../../../assets/images/dolar.png" alt="Dólar">
+                    </label>
+                </div>
+            </div>
+            <!-- Aquí debes incluir los elementos de tu simulador de crédito vehicular -->
+            <!-- Por ejemplo, campos de entrada, botones, resultados, etc. -->
+            <div class="additional-container">
+                <!-- Contenido del contenedor adicional -->
+                <div class="column">
+                    <!-- 
+                    <div class="input-group">
+                        <label for="fecha-desembolso">Fecha de Desembolso</label>
+                        <input type="date" id="fecha-desembolso" (change)="actualizarDiaPago()">
+                    </div>
+                     -->
+                    <div class="input-group">
+                        <label for="fecha-desembolso">Fecha de Desembolso</label>
+                        <input type="date" id="fecha-desembolso">
+                    </div>
+                    <div class="input-group">
+                        <label for="valor-vehiculo">Valor de Vehículo</label>
+                        <input type="text" id="valor-vehiculo" (change)="actualizarValores()"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    </div>
+                    <div class="input-group">
+                        <label for="tasa-efectiva-anual">Tasa Efectiva Anual (%)</label>
+                        <input type="text" id="tasa-efectiva-anual" 
+                        oninput="this.value = this.value.replace(/[^\d.]+/g, ''); 
+                        this.value = this.value.replace(/(\.\d*)\..*/g, '$1'); 
+                        this.value = this.value.replace(/^\./, '');">
+                    </div>
+                    <div class="input-group">
+                        <label for="periodo-pago">Periodo de Pago (Mensual)</label>
+                        <select id="periodo-pago">
+                            <option value="24">24</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+
+                    <!-- 
+                    <div class="input-group">
+                        <label for="dia-pago">Día de Pago de la Cuota</label>
+                        <input type="text" id="dia-pago" (input)="actualizarDiaPago()" readonly />
+                    </div>
+                     -->
+                    <div class="input-group">
+                        <label for="tasa-descuento">Tasa de Descuento Anual (COK)</label>
+                        <input type="text" id="tasa-descuento"
+                        oninput="this.value = this.value.replace(/[^\d.]+/g, ''); 
+                        this.value = this.value.replace(/(\.\d*)\..*/g, '$1'); 
+                        this.value = this.value.replace(/^\./, '');">
+                    </div>
+                    <div class="input-group">
+                        <label for="gastos-notariales">Gastos Notariales</label>
+                        <input type="text" id="gastos-notariales"    readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="gastos-registrales">Gastos Registrales</label>
+                        <input type="text" id="gastos-registrales" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="comision-estudio">Comisión de Estudio</label>
+                        <input type="text" id="comision-estudio"  readonly>
+                    </div>
+                   
+                    <div class="input-group">
+                        <label for="seguro-desgravamen">Seguro Desgravamen Mensual (%)</label>
+                        <input type="text" id="seguro-desgravamen" value="0.050" readonly>
+                    </div>
+                </div>
+                <div class="column">
+                    
+                    <!-- Agrega otro par de etiquetas label e input aquí -->
+                    <div class="input-group">
+                        <label for="cuota-inicial">Cuota Inicial (20%)</label>
+                        <input type="text" id="cuota-inicial" (input)="actualizarValores()" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="monto-prestamo">Monto del Préstamo (80%)</label>
+                        <input type="text" id="monto-prestamo" (input)="actualizarValores()" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="cuota-final">Cuota Final (40%)</label>
+                        <input type="text" id="cuota-final" (input)="actualizarValores()" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="cuotas-año">Cuotas al Año (Meses)</label>
+                        <input type="text" id="cuotas-año" value="12" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="seguro-vehicular">Seguro Vehicular Anual (%)</label>
+                        <input type="text" id="seguro-vehicular" value="4.72" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="portes" style="padding-right: 80px;">Portes</label>
+                        <input type="text" id="portes"  readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="gastos-administracion">Gastos de Administración</label>
+                        <input type="text" id="gastos-administracion"  readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="periodo-total">Periodo de Gracia Total (Mensual)</label>
+                        <select id="periodo-total">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                           
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="periodo-parcial">Periodo de Gracia Parcial (Mensual)</label>
+                        <select id="periodo-parcial">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                           
+                        </select>
+                    </div>
+                    <!--
+
+<div class="input-group">
+                        <label for="seguro-vehicular">Seguro Vehicular (%)</label>
+                        <input type="text" id="seguro-vehicular" value="4.72" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="envio-estado-cuenta">Envío de Estado de Cuenta (Físico)</label>
+                        <input type="text" id="envio-estado-cuenta" value="10" readonly>
+                    </div>
+                     -->
+                    
+                </div>
+            </div>
+            <button id="calcular-button" (click)="calcularCronograma()">Ver Cronograma</button>
+
+        </div>
+    </div>
+</div>

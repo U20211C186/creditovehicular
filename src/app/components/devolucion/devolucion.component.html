@@ -1,0 +1,71 @@
+<app-toolbar-session></app-toolbar-session>
+<div class="center-text">
+  Cronograma de Devolución
+</div>
+<div class="purchase-history">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla tabla-estilo">
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+    <!-- Fecha Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaPago}} </td>
+    </ng-container>
+
+    <!-- Saldo Column -->
+    <ng-container matColumnDef="saldo">
+      <th mat-header-cell *matHeaderCellDef> Saldo </th>
+      <td mat-cell *matCellDef="let element"> {{element.saldoMensual}} </td>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="interes">
+      <th mat-header-cell *matHeaderCellDef> Interés </th>
+      <td mat-cell *matCellDef="let element"> {{element.interesMensual}} </td>
+    </ng-container>
+
+    <!-- Seguro Desgravamen Column -->
+    <ng-container matColumnDef="segurodes">
+      <th mat-header-cell *matHeaderCellDef> Seguro Desgravamen </th>
+      <td mat-cell *matCellDef="let element"> {{element.seguroDesgravamen}} </td>
+    </ng-container>
+<!-- Seguro Vehicular Column -->
+<ng-container matColumnDef="segurovehi">
+  <th mat-header-cell *matHeaderCellDef> Seguro Vehicular </th>
+  <td mat-cell *matCellDef="let element"> {{element.seguroVehicular}} </td>
+</ng-container>
+<!-- Amortización Column -->
+<ng-container matColumnDef="amortizacion">
+  <th mat-header-cell *matHeaderCellDef> Amortización </th>
+  <td mat-cell *matCellDef="let element"> {{element.amortizacionMensual}} </td>
+</ng-container>
+<!-- Envío Físico de Estado de Cuenta Column -->
+<ng-container matColumnDef="portes">
+  <th mat-header-cell *matHeaderCellDef> Portes </th>
+  <td mat-cell *matCellDef="let element"> {{element.portesMensual}} </td>
+</ng-container>
+<ng-container matColumnDef="gastosadmin">
+  <th mat-header-cell *matHeaderCellDef> Gastos de Administración </th>
+  <td mat-cell *matCellDef="let element"> {{element.gastosAdministracionMensual}} </td>
+</ng-container>
+<ng-container matColumnDef="flujototal">
+  <th mat-header-cell *matHeaderCellDef> Flujo Total </th>
+  <td mat-cell *matCellDef="let element"> {{element.flutoTotalMensual}} </td>
+</ng-container>
+<!-- Cuota Column -->
+<ng-container matColumnDef="cuota">
+  <th mat-header-cell *matHeaderCellDef> Cuota </th>
+  <td mat-cell *matCellDef="let element"> {{element.cuotaMensual}} </td>
+</ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="center-buttons">
+    <button class="button-medio" (click)="quedarseConElAuto()" >Aceptar</button>
+  
+  </div>
+  <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+  </mat-paginator>
+</div>

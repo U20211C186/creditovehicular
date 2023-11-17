@@ -1,0 +1,63 @@
+<app-toolbar-session></app-toolbar-session>
+<div class="header">
+
+    <div class="center-text">
+      Datos Guardados
+    </div>
+    <button class="button" (click)="limpiar()">Limpiar Datos</button>
+  
+  </div>
+<div class="purchase-history">
+    <table mat-table [dataSource]="vehiclesCredits" class="mat-elevation-z8 tabla tabla-estilo">
+          <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{ element.user.name+' '+ element.user.lastName}} </td>
+    </ng-container>
+
+        <ng-container matColumnDef="diaPago">
+            <th mat-header-cell *matHeaderCellDef> Día de Pago de Cada Mes </th>
+            <td mat-cell *matCellDef="let element"> {{ element.diaPago }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="moneda">
+            <th mat-header-cell *matHeaderCellDef> Moneda </th>
+            <td mat-cell *matCellDef="let element"> {{ element.moneda }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="van">
+            <th mat-header-cell *matHeaderCellDef> VAN </th>
+            <td mat-cell *matCellDef="let element"> {{ element.van }} </td>
+        </ng-container>
+        <ng-container matColumnDef="tir">
+            <th mat-header-cell *matHeaderCellDef> TIR (%)</th>
+            <td mat-cell *matCellDef="let element"> {{ element.tir }} </td>
+        </ng-container>
+        <ng-container matColumnDef="tcea">
+            <th mat-header-cell *matHeaderCellDef> TCEA (%)</th>
+            <td mat-cell *matCellDef="let element"> {{ element.tcea }} </td>
+        </ng-container>
+        <ng-container matColumnDef="cuoton">
+            <th mat-header-cell *matHeaderCellDef> Cuotón </th>
+            <td mat-cell *matCellDef="let element"> {{ element.cuotaFinal }} </td>
+        </ng-container>
+        <ng-container matColumnDef="cuotaMensual">
+            <th mat-header-cell *matHeaderCellDef> Cuota Mensual </th>
+            <td mat-cell *matCellDef="let element"> {{ element.cuotaMensual }} </td>
+        </ng-container>
+        <ng-container matColumnDef="flujoMensual">
+            <th mat-header-cell *matHeaderCellDef> Flujo Mensual </th>
+            <td mat-cell *matCellDef="let element"> {{ element.flujoMensual }} </td>
+        </ng-container>
+        <!-- Agrega más ng-container para otras columnas si es necesario -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"></mat-paginator>
+</div>

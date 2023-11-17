@@ -1,0 +1,84 @@
+mat-toolbar {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+mat-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  background-color: #74A629;
+}
+
+.color-icon {
+  color: white;
+}
+
+.boton {
+  margin-right: 10px;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Agrega esta línea para que el contenedor de búsqueda crezca y ocupe el espacio disponible */
+  justify-content: center; /* Agrega esta línea para centrar horizontalmente el contenido de búsqueda */
+}
+
+.menu-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  color: white;
+}
+
+.mat-icon-button {
+  min-width: auto;
+}
+
+mat-form-field {
+  margin-bottom: 0;
+  max-width: 300px; /* Cambia "width" a "max-width" para permitir que el campo de búsqueda sea responsive */
+  width: 100%; /* Asegúrate de que el campo de búsqueda ocupe todo el ancho disponible */
+}
+
+mat-icon {
+  color: #000;
+}
+
+@media (max-width: 960px) {
+  .menu-button-container {
+    position: absolute;
+    right: 0;
+    margin-right: 16px;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    background-color: #67C5C8;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    padding: 8px;
+    display: none;
+    z-index: 1; /* Ajusta este valor según tus necesidades */
+
+  }
+
+  .menu-items.show-menu {
+    display: flex;
+  }
+
+  .menu-items button {
+    margin-bottom: 8px;
+  }
+}

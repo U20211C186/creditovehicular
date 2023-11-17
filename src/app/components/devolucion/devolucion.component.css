@@ -1,0 +1,80 @@
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Puedes ajustar el margen según tus necesidades */
+  }
+  
+  .button-medio {
+    /* Estilos de tu botón, por ejemplo: */
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #03588C; /* Cambia el color de fondo del botón según tus preferencias */
+    color: #fff; /* Texto en color blanco */
+    border: none;
+    cursor: pointer;
+  }
+.purchase-history {
+    width: 100%;
+    position: absolute; 
+    top: 200px;
+    overflow-x: auto; /* Agrega desplazamiento horizontal */
+}
+
+.center-text {
+    margin-top: 40px;
+    color: #fff; /* Texto en color blanco */
+    text-align: center;
+    padding: 10px; /* Espacio alrededor del texto */
+    font-size: 40px;
+    font-weight: bold;
+    flex: 1; /* Agrega esta línea para que el texto se expanda y esté en el centro */
+
+  }
+  
+.tabla-estilo td {
+    background-color: #E95D5D;
+    color: #000000;
+    border-color: #000000;
+    white-space: nowrap; /* Evita el ajuste de línea en celdas de la tabla */
+}
+
+.tabla-estilo th {
+    background-color: #C87589;
+    color: white;
+    white-space: nowrap; /* Evita el ajuste de línea en encabezados de columna */
+}
+
+@media screen and (max-width: 300px) {
+    .tabla-estilo {
+        width: 100%;
+    }
+  
+    .tabla-estilo th,
+    .tabla-estilo td {
+        display: block;
+        text-align: left;
+    }
+  
+    .tabla-estilo th {
+        background-color: #C87589;
+        color: white;
+        padding: 10px;
+    }
+  
+    .tabla-estilo td {
+        background-color: #C87589;
+        color: #000000;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+  
+    .tabla-estilo td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+}
+
