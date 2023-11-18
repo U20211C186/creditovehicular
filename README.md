@@ -1,4 +1,4 @@
-# Credito Vehicular - Compra Inteligente
+# Ayuda y Asistencia Técnica Credito Vehicular - Compra Inteligente
 1. Para el registro: 
 *El usuario debera registrar un email que termine en "@gmail.com" o "@hotmail.com" caso contratio no sera valido.
 *El usuario debera registrar su contraseña el cual debe tener de 9 a 12 caracteres.
