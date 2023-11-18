@@ -331,6 +331,13 @@ getCalculosPeriodoGraciaTotalYParial(): void {
 
 
   //4
+    for(let i=1;i<(parseInt(this.periodoParcial)+parseInt(this.periodoTotal))+1;i++){
+      seguroDesMensual[i]=((saldoMensual[i-1]) * tasaSeguroDesgraMensual);
+    }
+  
+
+  /*
+  //4
   if(parseInt(this.periodoParcial)===1){
     seguroDesMensual[1] = (parseFloat(this.montoPrestamo) * tasaSeguroDesgraMensual);
 
@@ -339,7 +346,8 @@ getCalculosPeriodoGraciaTotalYParial(): void {
     for(let i=1;i<(parseInt(this.periodoParcial)+parseInt(this.periodoTotal));i++){
       seguroDesMensual[i+1]=((saldoMensual[i]) * tasaSeguroDesgraMensual);
     }
-  }
+  }*/
+
   console.log('Seguro Desgravamen MensualASDASD',seguroDesMensual);
   
   let auxSumaPeriodos=parseInt(this.periodoParcial)+parseInt(this.periodoTotal);
