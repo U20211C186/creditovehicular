@@ -15,3 +15,16 @@
 *El usuario tendra la posibilidad de ver el cronograma del cuoton.
 *El usuario tendra la posibilidad de guardar un resumen del credito vehicular.
 *El usuario tendra la posibilidad de eliminar los datos guardados de los resumenes de sus creditos vehiculares.
+
+4. Despliegue del Frontend localmente:
+*Accede a la terminal y dirígete al directorio que alberga el código fuente de la aplicación.
+*Utiliza el comando ng serve para poner en marcha el servidor de desarrollo de Angular.
+*Abre tu navegador web y visita la URL http://localhost:4200 para visualizar la aplicación en funcionamiento.
+
+5. Despliegue del Backend localmente:
+*Accede a la carpeta que alberga el código fuente de la aplicación.
+*Dirigete al archivo "SaveupApplication.java" donde se encuentra la funcion principal y dale click a "Run SaveupApplication" para poner en marcha el servidor de desarrollo de Spring Boot.
+*Abre tu navegador web y visita la URL http://localhost:8080 para verificar que la aplicación este en funcionamiento.
+
+6. Plataforma web desplegada:
+*Ingresa al siguiente enlace para acceder a las funcionalidades de nuestro software https://creditovehicular.netlify.app/
